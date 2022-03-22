@@ -1,5 +1,5 @@
 # Rethinking Self-Supervision Objectives for Generalizable Coherence Modeling
-Code and Data for the ACL 2022 paper: https://arxiv.org/abs/2110.07198
+Code and data for the ACL 2022 paper: https://arxiv.org/abs/2110.07198
 
 ### Pre-requisites
 ```
@@ -22,6 +22,11 @@ Navigate into the model folder that you want to train (pairwise, contrastive or 
 > CUDA_VISIBLE_DEVICES=x python train.py --train_file [train.pkl] --dev_file [dev.pkl]
 ```
 Please refer to the `args.py` file for all other arguments that can be set. All hyperparameter defaults are set to the values used for experiments in the paper.
+
+To evaluate the model on a test set, run
+```
+> CUDA_VISIBLE_DEVICES=x python eval.py --test_file [test.pkl] --data_type [single,multiple] --pretrained_model [saved_checkpoint.pt]
+```
        
 ### Evaluation using the Coherence Model
 You can use our trained model to evaluate machine generated text. More details will be updated soon.
