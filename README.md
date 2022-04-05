@@ -35,7 +35,8 @@ To evaluate the Krippendorff's alpha agreement for the `LMvLM` dataset, run the 
 ```
 
 ### Training the model
-Navigate into the model folder that you want to train (pairwise, contrastive or our full hard negative model with momentum encoder). 
+Navigate into the model folder that you want to train (pairwise, contrastive or our full hard negative model with momentum encoder). You can download the formatted INSteD training and dev sets for both the original intrusion and the permuted document tasks here: https://www.dropbox.com/sh/3zoxwzdt0il8x48/AABMPdIriqJp_-0gHw0k2dHfa?dl=0. Note that the WSJ dataset requires an LDC license, and we will be happy to share the WSJ permuted document dataset with you if you have the it (please email the authors). 
+
 ```
 > CUDA_VISIBLE_DEVICES=x python train.py --train_file [train.pkl] --dev_file [dev.pkl]
 ```
